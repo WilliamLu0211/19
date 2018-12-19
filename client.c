@@ -20,4 +20,6 @@ int main() {
     printf("Response: %s\n", response);
     
   }
+
+  return 0;
 }
