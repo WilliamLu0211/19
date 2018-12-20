@@ -10,15 +10,15 @@ int main() {
 
   char input[BUFFER_SIZE];
   char response[BUFFER_SIZE];
-  
+
   while (1){
 
     printf("Type something: ");
-    scanf(" %[^\n]s", input);
+    fgets(input, sizeof(input), stdin);
     write(to_server, input, sizeof(input));
     read(from_server, response, sizeof(response));
     printf("Response: %s\n", response);
-    
+
   }
 
   return 0;
